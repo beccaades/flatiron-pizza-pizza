@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Flatiron Pizza Pizza</title>
+  </head>
+  <body>
+    <h1>Flatiron Pizza Pizza</h1>
+      <ul>
+        <% @pizza.each do |biz| %>
+          <li><%= biz.name %></li>
+        <% end %>
+      </ul>
+  </body>
+</html>

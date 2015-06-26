@@ -1,0 +1,11 @@
+source 'http://rubygems.org'
+
+gem 'sinatra'
+gem 'dotenv'
+gem 'thin'
+gem 'shotgun'
+gem 'pry'
+gem 'require_all'
+gem 'yelp'
+gem 'activerecord', :require => 'active_record'
+gem 'sinatra-activerecord', :require => 'sinatra/activerecord'
