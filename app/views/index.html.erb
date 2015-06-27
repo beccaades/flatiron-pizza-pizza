@@ -3,12 +3,14 @@
   <head>
     <title>Flatiron Pizza Pizza</title>
   </head>
-  <body>
-    <h1>Flatiron Pizza Pizza</h1>
-      <ul>
+  <body background = "http://s.hswstatic.com/gif/tossing-a-pizza-1.jpg">
+    <center><font face="impact", size="100">Flatiron Pizza Pizza</font></center></h1>
+    <p></p>
+    <center><img src="http://cdn.lolzbook.com/wp-content/uploads/2014/09/Pizza-Is-Love.jpg"></center>
+    <p></p>
         <% @pizza.each do |biz| %>
-          <li><%= biz.name %></li>
+          <center><h3><font face="impact"><%= biz.name %></font></h3></center>
+          <p></p>
         <% end %>
-      </ul>
   </body>
 </html>
