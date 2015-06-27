@@ -15,7 +15,7 @@ class FindPizza
   def get_best_pizza
       best_pizza = []
       params = {term: 'pizza',
-            limit: 10,
+            limit: 5,
             sort: 2 #sorts by rating
           }
       results = YELP_CLIENT.search('New York', params)
@@ -24,5 +24,5 @@ class FindPizza
 end
 
 
-pizza = FindPizza.new.get_best_pizza
-binding.pry
+# pizza = FindPizza.new.get_best_pizza
+# binding.pry

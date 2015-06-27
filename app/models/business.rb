@@ -1,15 +1,14 @@
 class Business
-  attr_reader :name, :address, :phone, :rating_img, :review_snippet , :yelp_pg, :img_url, :picture_url
+  attr_reader :name, :address, :phone, :rating_img, :review_snippet , :yelp_page, :img_url
 
-  def initialize(biz_info = {})
-
-    @address = biz_info[:address]
-    @phone = biz_info[:phone]
-    @rating_img = biz_info[:rating_img]
-    @review_snippet = biz_info[:review_snippet]
-    @yelp_pg = biz_info[:yelp_pg]
-    @img_url = biz_info[:img_url]
-    @picture_url = biz_info[:picture_url]
+  def initialize(biz_burst)
+    @name = biz_burst.name
+    @address = biz_burst.location.address
+    @phone = biz_burst.display_phone
+    @rating_img = biz_burst.rating_img_url_large
+    @review_snippet = biz_burst.snippet_text
+    @yelp_page = biz_burst.url
+    @img_url = biz_burst.image_url
   end
   
 end
