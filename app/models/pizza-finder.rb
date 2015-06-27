@@ -21,5 +21,7 @@ class FindPizza
       results = YELP_CLIENT.search('Financial District, Manhattan, NY', params)
   end
 
+  pizza = FindPizza.new.get_best_pizza
+  binding.pry
 end
 
