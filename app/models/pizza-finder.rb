@@ -22,5 +22,7 @@ class FindPizza
       #Try returning randomized results and putting bounds on area aurronding flatiron
   end
 
+  pizza = FindPizza.new.get_best_pizza
+  binding.pry
 end
 

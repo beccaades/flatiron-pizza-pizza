@@ -3,7 +3,7 @@ class Business
 
   def initialize(biz_burst)
     @name = biz_burst.name
-    @address = biz_burst.location.address
+    @address = biz_burst.location.address.first
     @phone = biz_burst.display_phone
     @rating_img = biz_burst.rating_img_url_large
     @review_snippet = biz_burst.snippet_text

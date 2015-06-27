@@ -3,14 +3,23 @@
   <head>
     <title>Flatiron Pizza Pizza</title>
   </head>
-  <body background = "http://s.hswstatic.com/gif/tossing-a-pizza-1.jpg">
+  <body background= "http://s.hswstatic.com/gif/tossing-a-pizza-1.jpg">
     <center><font face="impact", size="100">Flatiron Pizza Pizza</font></center></h1>
     <p></p>
     <center><img src="http://cdn.lolzbook.com/wp-content/uploads/2014/09/Pizza-Is-Love.jpg"></center>
-    <p></p>
+    </n>
+    </n>
         <% @bizs_from_yelp.each do |biz| %>
           <center><h3><font face="impact"><%= biz.name %></font></h3></center>
-          <p></p>
+           <center><img src="<%= biz.rating_img %>"</center>
+           <center><h5><font face="impact"><%= biz.address %></font></h5></center>
+           <center><img src="<%=biz.img_url %>"</center>
+            <center><h5><%= biz.phone %></h5></center>
+            <div style="width: 25%; height: 50px; overflow: auto; scrollbar-face-color: #CE7E00; scrollbar-shadow-color: #FFFFFF; br /scrollbar-highlight-color: #6F4709; scrollbar-3dlight-color:#11111; scrollbar-darkshadow-color: #6F4709; br /scrollbar-track-color: #FFE8C1; scrollbar-arrow-color: #6F4709;"><%= biz.review_snippet %></div>
+            <p></p>
+              <center><a href="<%= biz.yelp_page %>">Yelp Page</a></center>
+              <p></p>
+              <p></p>
         <% end %>
   </body>
 </html>
