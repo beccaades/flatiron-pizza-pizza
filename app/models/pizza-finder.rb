@@ -19,6 +19,7 @@ class FindPizza
             sort: 2 #sorts by rating
           }
       results = YELP_CLIENT.search('Financial District, Manhattan, NY', params)
+      #Try returning randomized results and putting bounds on area aurronding flatiron
   end
 
 end
