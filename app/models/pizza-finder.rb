@@ -15,9 +15,7 @@ class FindPizza
   def get_best_pizza
       best_pizza = []
       params = {term: 'pizza',
-            limit: 10,
-            sort: 2 #sorts by rating
-          }
+            limit: 20}
 
       bounding_box = { sw_latitude: 40.704822, sw_longitude: -74.018725, ne_latitude: 40.708336, ne_longitude: -74.007181 }
       results = YELP_CLIENT.search_by_bounding_box(bounding_box, params)
