@@ -15,14 +15,19 @@ class FindPizza
   def get_best_pizza
       best_pizza = []
       params = {term: 'pizza',
-            limit: 5,
+            limit: 10,
             sort: 2 #sorts by rating
           }
-      results = YELP_CLIENT.search('Financial District, Manhattan, NY', params)
-      #Try returning randomized results and putting bounds on area aurronding flatiron
+
+      bounding_box = { sw_latitude: 40.704822, sw_longitude: -74.018725, ne_latitude: 40.708336, ne_longitude: -74.007181 }
+      results = YELP_CLIENT.search_by_bounding_box(bounding_box, params)
+      #= YELP_CLIENT.search('Financial District, Manhattan, NY', params)
+
+            
+
   end
 
-  pizza = FindPizza.new.get_best_pizza
-  binding.pry
+  # pizza = FindPizza.new.get_best_pizza
+  # binding.pry
 end
 

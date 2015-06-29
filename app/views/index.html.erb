@@ -1,15 +1,44 @@
 <!doctype html>
 <html>
   <head>
-    <title>Flatiron Pizza Pizza</title>
+    <meta charset="UTF-8">
+    <title>Flatiron.slice()</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   </head>
-  <body background= "http://s.hswstatic.com/gif/tossing-a-pizza-1.jpg">
-    <center><font face="impact", size="100">Flatiron Pizza Pizza</font></center></h1>
-    <p></p>
-    <center><img src="http://cdn.lolzbook.com/wp-content/uploads/2014/09/Pizza-Is-Love.jpg"></center>
-    </n>
-    </n>
+
+  <header>
+    <h2>Flatiron.slice()</h2>
+  </header>
+
+
+  <body>
+
+    <div class="clearfix"></div>
+
         <% @bizs_from_yelp.each do |biz| %>
+          <div class="BizEntity">
+            <div class="NameAddressStars">
+              <h2><%= biz.name %></h2>
+              <img src="<%= biz.rating_img %>" height="25">
+              <h4><%= biz.address %> </h4>
+              <%= biz.coord %>
+            </div>
+
+            <div class="PhoneReviewYelp">
+            <p><%= biz.phone %></p>
+            <p><%= biz.review_snippet %></p>
+            <a href="<%= biz.yelp_page %>"><%= biz.name %> Yelp Page</a>
+              
+            </div>
+
+            <div class="BizPhoto">
+              <img src="<%=biz.img_url %>">
+            </div>
+          </div>
+
+<!--
           <center><h3><font face="impact"><%= biz.name %></font></h3></center>
            <center><img src="<%= biz.rating_img %>"</center>
            <center><h5><font face="impact"><%= biz.address %></font></h5></center>
@@ -20,6 +49,13 @@
               <center><a href="<%= biz.yelp_page %>">Yelp Page</a></center>
               <p></p>
               <p></p>
+-->
         <% end %>
   </body>
+
+  <footer>
+    
+  </footer>
+
+
 </html>
